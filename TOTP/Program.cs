@@ -5,11 +5,12 @@ class Program
     static void Main(string[] args)
     {
         // Generate a secret key
-        // var secretKey = KeyGeneration.GenerateRandomKey(20);
-        // var base32Secret = Base32Encoding.ToString(secretKey);
+        var secretKey = KeyGeneration.GenerateRandomKey(20);
+        var base32Secret = Base32Encoding.ToString(secretKey);
 
-        var base32Secret = "JBSWY3DPEHPK3PXP"; // Example Base32 secret key
-        var secretKey = Base32Encoding.ToBytes(base32Secret);
+        // Uncomment the following line to use a predefined Base32 secret key
+        // var base32Secret = "JBSWY3DPEHPK3PXP"; // Example Base32 secret key
+        // var secretKey = Base32Encoding.ToBytes(base32Secret);
 
         Console.WriteLine($"Secret Key (Base32): {base32Secret}");
 
